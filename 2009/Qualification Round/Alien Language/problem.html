@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 11.7px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #f5f5f5}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p5 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 11.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 11.0px}
+    p.p7 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; background-color: #ffffff}
+    span.s3 {font-kerning: none; background-color: #efefef}
+    span.s4 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 117.0px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 78.0px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">After years of study, scientists at Google Labs have discovered an alien language transmitted from a faraway planet. The alien language is very unique in that every word consists of exactly <b>L</b> lowercase letters. Also, there are exactly <b>D</b> words in this language.</span></p>
+<p class="p1"><span class="s1">Once the dictionary of all the words in the alien language was built, the next breakthrough was to discover that the aliens have been transmitting messages to Earth for the past decade. Unfortunately, these signals are weakened due to the distance between our two planets and some of the words may be misinterpreted. In order to help them decipher these messages, the scientists have asked you to devise an algorithm that will determine the number of possible interpretations for a given pattern.</span></p>
+<p class="p1"><span class="s1">A pattern consists of exactly <b>L</b> tokens. Each token is either a single lowercase letter (the scientists are very sure that this is the letter) or a group of unique lowercase letters surrounded by parenthesis ( and ). For example: (ab)d(dc) means the first letter is either a or b, the second letter is definitely d and the last letter is either d or c. Therefore, the pattern (ab)d(dc) can stand for either one of these 4 possibilities: add, adc, bdd, bdc.</span></p>
+<p class="p2"><span class="s1">Input</span></p>
+<p class="p1"><span class="s1">The first line of input contains 3 integers, <b>L</b>, <b>D</b> and <b>N</b> separated by a space. <b>D</b> lines follow, each containing one word of length <b>L</b>. These are the words that are known to exist in the alien language. <b>N</b> test cases then follow, each on its own line and each consisting of a pattern as described above. You may assume that all known words provided are unique.</span></p>
+<p class="p2"><span class="s1">Output</span></p>
+<p class="p1"><span class="s1">For each test case, output</span></p>
+<p class="p3"><span class="s1">Case #<b>X</b>: <b>K</b></span></p>
+<p class="p4"><span class="s1">where <b>X</b> is the test case number, starting from 1, and <b>K</b> indicates how many words in the alien language match the pattern.</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Limits</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">Small dataset</span></p>
+<p class="p7"><span class="s2">1 ≤ <b>L</b> ≤ 10</span><span class="s1"><br>
+</span><span class="s2">1 ≤ <b>D</b> ≤ 25</span><span class="s1"><br>
+</span><span class="s2">1 ≤ <b>N</b> ≤ 10</span><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">Large dataset</span></p>
+<p class="p7"><span class="s2">1 ≤ <b>L</b> ≤ 15</span><span class="s1"><br>
+</span><span class="s2">1 ≤ <b>D</b> ≤ 5000</span><span class="s1"><br>
+</span><span class="s2">1 ≤ <b>N</b> ≤ 500</span><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">Sample</span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p8"><span class="s1"></span><br></p>
+        <p class="p9"><span class="s3">Input</span><span class="s4"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p10"><span class="s3"> </span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p8"><span class="s1"></span><br></p>
+        <p class="p9"><span class="s3">Output</span><span class="s4"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p10"><span class="s3"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p11"><span class="s3">3 5 4</span></p>
+        <p class="p11"><span class="s3">abc</span></p>
+        <p class="p11"><span class="s3">bca</span></p>
+        <p class="p11"><span class="s3">dac</span></p>
+        <p class="p11"><span class="s3">dbc</span></p>
+        <p class="p11"><span class="s3">cba</span></p>
+        <p class="p11"><span class="s3">(ab)(bc)(ca)</span></p>
+        <p class="p11"><span class="s3">abc</span></p>
+        <p class="p11"><span class="s3">(abc)(abc)(abc)</span></p>
+        <p class="p11"><span class="s3">(zyx)bc</span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p11"><span class="s3">Case #1: 2</span></p>
+        <p class="p11"><span class="s3">Case #2: 1</span></p>
+        <p class="p11"><span class="s3">Case #3: 3</span></p>
+        <p class="p11"><span class="s3">Case #4: 0</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
