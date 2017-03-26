@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 11.7px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #f5f5f5}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p5 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 11.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 16.0px}
+    p.p10 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; background-color: #efefef}
+    span.s3 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    span.s4 {font-kerning: none; background-color: #ffffff}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 62.4px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 78.0px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">Problem</span></p>
+<p class="p2"><span class="s1">The urban legend goes that if you go to the Google homepage and search for "Google", the universe will implode. We have a secret to share... It is true! Please don't try it, or tell anyone. All right, maybe not. We are just kidding.</span></p>
+<p class="p2"><span class="s1">The same is not true for a universe far far away. In that universe, if you search on any search engine for that search engine's name, the universe does implode!</span></p>
+<p class="p2"><span class="s1">To combat this, people came up with an interesting solution. All queries are pooled together. They are passed to a central system that decides which query goes to which search engine. The central system sends a series of queries to one search engine, and can switch to another at any time. Queries must be processed in the order they're received. The central system must never send a query to a search engine whose name matches the query. In order to reduce costs, the number of switches should be minimized.</span></p>
+<p class="p2"><span class="s1">Your task is to tell us how many times the central system will have to switch between search engines, assuming that we program it optimally.</span></p>
+<p class="p1"><span class="s1">Input</span></p>
+<p class="p2"><span class="s1">The first line of the input file contains the number of cases, <b>N</b>. <b>N</b> test cases follow.</span></p>
+<p class="p2"><span class="s1">Each case starts with the number <b>S</b> -- the number of search engines. The next <b>S</b> lines each contain the name of a search engine. Each search engine name is no more than one hundred characters long and contains only uppercase letters, lowercase letters, spaces, and numbers. There will not be two search engines with the same name.</span></p>
+<p class="p2"><span class="s1">The following line contains a number <b>Q</b> -- the number of incoming queries. The next <b>Q</b> lines will each contain a query. Each query will be the name of a search engine in the case.</span></p>
+<p class="p1"><span class="s1">Output</span></p>
+<p class="p2"><span class="s1">For each input case, you should output:</span></p>
+<p class="p3"><span class="s1">Case #<b>X</b>: <b>Y</b></span></p>
+<p class="p4"><span class="s1">where <b>X</b> is the number of the test case and <b>Y</b> is the number of search engine switches. Do not count the initial choice of a search engine as a switch.</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Limits</span></p>
+<p class="p2"><span class="s1">0 &lt; <b>N</b> ≤ 20</span></p>
+<p class="p1"><span class="s1">Small dataset</span></p>
+<p class="p2"><span class="s1">2 ≤ <b>S</b> ≤ 10</span></p>
+<p class="p2"><span class="s1">0 ≤ <b>Q</b> ≤ 100</span></p>
+<p class="p1"><span class="s1">Large dataset</span></p>
+<p class="p2"><span class="s1">2 ≤ <b>S</b> ≤ 100</span></p>
+<p class="p2"><span class="s1">0 ≤ <b>Q</b> ≤ 1000</span></p>
+<p class="p1"><span class="s1">Sample</span></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p6"><span class="s1"></span><br></p>
+        <p class="p7"><span class="s2">Input</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p6"><span class="s1"></span><br></p>
+        <p class="p7"><span class="s2">Output</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p8"><span class="s2">2</span></p>
+        <p class="p8"><span class="s2">5</span></p>
+        <p class="p8"><span class="s2">Yeehaw</span></p>
+        <p class="p8"><span class="s2">NSM</span></p>
+        <p class="p8"><span class="s2">Dont Ask</span></p>
+        <p class="p8"><span class="s2">B9</span></p>
+        <p class="p8"><span class="s2">Googol</span></p>
+        <p class="p8"><span class="s2">10</span></p>
+        <p class="p8"><span class="s2">Yeehaw</span></p>
+        <p class="p8"><span class="s2">Yeehaw</span></p>
+        <p class="p8"><span class="s2">Googol</span></p>
+        <p class="p8"><span class="s2">B9</span></p>
+        <p class="p8"><span class="s2">Googol</span></p>
+        <p class="p8"><span class="s2">NSM</span></p>
+        <p class="p8"><span class="s2">B9</span></p>
+        <p class="p8"><span class="s2">NSM</span></p>
+        <p class="p8"><span class="s2">Dont Ask</span></p>
+        <p class="p8"><span class="s2">Googol</span></p>
+        <p class="p8"><span class="s2">5</span></p>
+        <p class="p8"><span class="s2">Yeehaw</span></p>
+        <p class="p8"><span class="s2">NSM</span></p>
+        <p class="p8"><span class="s2">Dont Ask</span></p>
+        <p class="p8"><span class="s2">B9</span></p>
+        <p class="p8"><span class="s2">Googol</span></p>
+        <p class="p8"><span class="s2">7</span></p>
+        <p class="p8"><span class="s2">Googol</span></p>
+        <p class="p8"><span class="s2">Dont Ask</span></p>
+        <p class="p8"><span class="s2">NSM</span></p>
+        <p class="p8"><span class="s2">NSM</span></p>
+        <p class="p8"><span class="s2">Yeehaw</span></p>
+        <p class="p8"><span class="s2">Yeehaw</span></p>
+        <p class="p8"><span class="s2">Googol</span></p>
+        <p class="p9"><span class="s1"></span><br></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p8"><span class="s2">Case #1: 1</span></p>
+        <p class="p8"><span class="s2">Case #2: 0</span></p>
+        <p class="p9"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><span class="s4">In the first case, one possible solution is to start by using Dont Ask, and switch to NSM after query number 8.</span><span class="s1"><br>
+</span><span class="s4">For the second case, you can use B9, and not need to make any switches.</span></p>
+</body>
+</html>
