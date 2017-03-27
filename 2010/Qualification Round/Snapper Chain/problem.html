@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p4 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 16.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; background-color: #ffffff}
+    span.s3 {font: 9.0px Arial; font-kerning: none; background-color: #ffffff}
+    span.s4 {font-kerning: none; background-color: #efefef}
+    span.s5 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 31.7px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 93.6px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Problem</span></h3>
+<p class="p2"><span class="s1">The <i>Snapper</i> is a clever little device that, on one side, plugs its input plug into an output socket, and, on the other side, exposes an output socket for plugging in a light or other device.</span></p>
+<p class="p2"><span class="s1">When a <i>Snapper</i> is in the ON state and is receiving power from its input plug, then the device connected to its output socket is receiving power as well. When you snap your fingers -- making a clicking sound -- any <i>Snapper</i> receiving power at the time of the snap toggles between the ON and OFF states.</span></p>
+<p class="p2"><span class="s1">In hopes of destroying the universe by means of a singularity, I have purchased <b>N</b><i>Snapper</i> devices and chained them together by plugging the first one into a power socket, the second one into the first one, and so on. The light is plugged into the <b>N</b>th <i>Snapper</i>.</span></p>
+<p class="p2"><span class="s1">Initially, all the <i>Snapper</i>s are in the OFF state, so only the first one is receiving power from the socket, and the light is off. I snap my fingers once, which toggles the first <i>Snapper</i> into the ON state and gives power to the second one. I snap my fingers again, which toggles both <i>Snapper</i>s and then promptly cuts power off from the second one, leaving it in the ON state, but with no power. I snap my fingers the third time, which toggles the first <i>Snapper</i> again and gives power to the second one. Now both <i>Snapper</i>s are in the ON state, and if my light is plugged into the second <i>Snapper</i> it will be <i>on</i>.</span></p>
+<p class="p2"><span class="s1">I keep doing this for hours. Will the light be <i>on</i> or <i>off</i> after I have snapped my fingers <b>K</b> times? The light is <i>on</i> if and only if it's receiving power from the <i>Snapper</i> it's plugged into.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Input</span></h3>
+<p class="p2"><span class="s1">The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> lines follow. Each one contains two integers, <b>N</b> and <b>K</b>.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Output</span></h3>
+<p class="p2"><span class="s1">For each test case, output one line containing "Case #x: y", where x is the case number (starting from 1) and y is either "ON" or "OFF", indicating the state of the light bulb.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Limits</span></h3>
+<p class="p2"><span class="s1">1 ≤ <b>T</b> ≤ 10,000.</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Small dataset</span></h4>
+<p class="p4"><span class="s2">1 ≤ <b>N</b> ≤ 10;</span><span class="s1"><br>
+</span><span class="s2">0 ≤ <b>K</b> ≤ 100;</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Large dataset</span></h4>
+<p class="p4"><span class="s2">1 ≤ <b>N</b> ≤ 30;</span><span class="s1"><br>
+</span><span class="s2">0 ≤ <b>K</b> ≤ 10</span><span class="s3"><sup>8</sup></span><span class="s2">;</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Sample</span></h3>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p5"><span class="s1"></span><br></p>
+        <p class="p6"><span class="s4">Input</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p7"><span class="s4"> </span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p5"><span class="s1"></span><br></p>
+        <p class="p6"><span class="s4">Output</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p7"><span class="s4"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p8"><span class="s4">4</span></p>
+        <p class="p8"><span class="s4">1 0</span></p>
+        <p class="p8"><span class="s4">1 1</span></p>
+        <p class="p8"><span class="s4">4 0</span></p>
+        <p class="p8"><span class="s4">4 47</span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p8"><span class="s4">Case #1: OFF</span></p>
+        <p class="p8"><span class="s4">Case #2: ON</span></p>
+        <p class="p8"><span class="s4">Case #3: OFF</span></p>
+        <p class="p8"><span class="s4">Case #4: ON</span></p>
+        <p class="p9"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
