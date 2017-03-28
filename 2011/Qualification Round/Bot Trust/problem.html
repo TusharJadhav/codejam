@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 11.7px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #f5f5f5}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p6 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 11.0px}
+    p.p8 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 13.0px Courier; font-kerning: none}
+    span.s3 {font: 10.0px Courier; font-kerning: none}
+    span.s4 {font: 9.0px Arial; font-kerning: none}
+    span.s5 {font-kerning: none; background-color: #ffffff}
+    span.s6 {font-kerning: none; background-color: #efefef}
+    span.s7 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 132.6px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 93.6px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Problem</span></h3>
+<p class="p2"><span class="s1">Blue and Orange are friendly robots. An evil computer mastermind has locked them up in separate hallways to test them, and then possibly give them cake.</span></p>
+<p class="p2"><span class="s1">Each hallway contains 100 buttons labeled with the positive integers {1, 2, ..., 100}. Button k is always k meters from the start of the hallway, and the robots both begin at button 1. Over the period of one second, a robot can walk one meter in either direction, or it can press the button at its position once, or it can stay at its position and not press the button. To complete the test, the robots need to push a certain sequence of buttons in a certain order. Both robots know the full sequence in advance. How fast can they complete it?</span></p>
+<p class="p2"><span class="s1">For example, let's consider the following button sequence:</span></p>
+<p class="p3"><span class="s1">   O 2, B 1, B 2, O 4</span></p>
+<p class="p2"><span class="s1">Here, </span><span class="s2">O 2</span><span class="s1"> means button 2 in Orange's hallway, </span><span class="s2">B 1</span><span class="s1"> means button 1 in Blue's hallway, and so on. The robots can push this sequence of buttons in 6 seconds using the strategy shown below:</span></p>
+<p class="p4"><span class="s1">Time | Orange <span class="Apple-converted-space">          </span>| Blue</span></p>
+<p class="p4"><span class="s1">-----+------------------+-----------------</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>1<span class="Apple-converted-space">  </span>| Move to button 2 | Stay at button 1</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>2<span class="Apple-converted-space">  </span>| Push button 2<span class="Apple-converted-space">    </span>| Stay at button 1</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>3<span class="Apple-converted-space">  </span>| Move to button 3 | Push button 1</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>4<span class="Apple-converted-space">  </span>| Move to button 4 | Move to button 2</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>5<span class="Apple-converted-space">  </span>| Stay at button 4 | Push button 2</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span>6<span class="Apple-converted-space">  </span>| Push button 4<span class="Apple-converted-space">    </span>| Stay at button 2</span></p>
+<p class="p5"><span class="s1">Note that Blue has to wait until Orange has completely finished pushing </span><span class="s3">O 2</span><span class="s1"> before it can start pushing </span><span class="s3">B 1</span><span class="s1">.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Input</span></h3>
+<p class="p2"><span class="s1">The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> test cases follow.</span></p>
+<p class="p2"><span class="s1">Each test case consists of a single line beginning with a positive integer <b>N</b>, representing the number of buttons that need to be pressed. This is followed by <b>N</b> terms of the form "<b>R</b></span><span class="s4"><sub>i</sub></span><span class="s1"><b>P</b></span><span class="s4"><sub>i</sub></span><span class="s1">" where <b>R</b></span><span class="s4"><sub>i</sub></span><span class="s1"> is a robot color (always 'O' or 'B'), and <b>P</b></span><span class="s4"><sub>i</sub></span><span class="s1"> is a button position.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Output</span></h3>
+<p class="p2"><span class="s1">For each test case, output one line containing "Case #x: y", where x is the case number (starting from 1) and y is the minimum number of seconds required for the robots to push the given buttons, in order.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Limits</span></h3>
+<p class="p2"><span class="s1">1 ≤ <b>P</b></span><span class="s4"><sub>i</sub></span><span class="s1"> ≤ 100 for all i.</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Small dataset</span></h4>
+<p class="p8"><span class="s5">1 ≤ <b>T</b> ≤ 20.</span><span class="s1"><br>
+</span><span class="s5">1 ≤ <b>N</b> ≤ 10.</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Large dataset</span></h4>
+<p class="p8"><span class="s5">1 ≤ <b>T</b> ≤ 100.</span><span class="s1"><br>
+</span><span class="s5">1 ≤ <b>N</b> ≤ 100.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Sample</span></h3>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p9"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s6">Input</span><span class="s7"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p11"><span class="s6"> </span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p9"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s6">Output</span><span class="s7"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p11"><span class="s6"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p12"><span class="s6">3</span></p>
+        <p class="p12"><span class="s6">4 O 2 B 1 B 2 O 4</span></p>
+        <p class="p12"><span class="s6">3 O 5 O 8 B 100</span></p>
+        <p class="p12"><span class="s6">2 B 2 B 1</span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p12"><span class="s6">Case #1: 6</span></p>
+        <p class="p12"><span class="s6">Case #2: 100</span></p>
+        <p class="p12"><span class="s6">Case #3: 4</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
