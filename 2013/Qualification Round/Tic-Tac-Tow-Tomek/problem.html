@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p5 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 11.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 16.0px}
+    li.li3 {margin: 0.0px 0.0px 2.5px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {background-color: #ffffff; -webkit-text-stroke: 0px #000000}
+    span.s3 {font-kerning: none; background-color: #ffffff}
+    span.s4 {font-kerning: none; background-color: #efefef}
+    span.s5 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 31.7px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 241.8px; padding: 0.0px 10.0px 0.0px 10.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Problem</span></h3>
+<p class="p2"><span class="s1">Tic-Tac-Toe-Tomek is a game played on a 4 x 4 square board. The board starts empty, except that a single 'T' symbol may appear in one of the 16 squares. There are two players: X and O. They take turns to make moves, with X starting. In each move a player puts her symbol in one of the empty squares. Player X's symbol is 'X', and player O's symbol is 'O'.</span></p>
+<p class="p2"><span class="s1">After a player's move, if there is a row, column or a diagonal containing 4 of that player's symbols, or containing 3 of her symbols and the 'T' symbol, she wins and the game ends. Otherwise the game continues with the other player's move. If all of the fields are filled with symbols and nobody won, the game ends in a draw. See the sample input for examples of various winning positions.</span></p>
+<p class="p2"><span class="s1">Given a 4 x 4 board description containing 'X', 'O', 'T' and '.' characters (where '.' represents an empty square), describing the current state of a game, determine the status of the Tic-Tac-Toe-Tomek game going on. The statuses to choose from are:</span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s2"></span><span class="s3">"X won" (the game is over, and X won)</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">"O won" (the game is over, and O won)</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">"Draw" (the game is over, and it ended in a draw)</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">"Game has not completed" (the game is not over yet)</span></li>
+</ul>
+<p class="p4"><span class="s1">If there are empty cells, and the game is not over, you should output "Game has not completed", even if the outcome of the game is inevitable.</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Input</span></h3>
+<p class="p2"><span class="s1">The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> test cases follow. Each test case consists of 4 lines with 4 characters each, with each character being 'X', 'O', '.' or 'T' (quotes for clarity only). Each test case is followed by an empty line.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Output</span></h3>
+<p class="p2"><span class="s1">For each test case, output one line containing "Case #x: y", where x is the case number (starting from 1) and y is one of the statuses given above. Make sure to get the statuses exactly right. When you run your code on the sample input, it should create the sample output exactly, including the "Case #1: ", the capital letter "O" rather than the number "0", and so on.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Limits</span></h3>
+<p class="p2"><span class="s1">The game board provided will represent a valid state that was reached through play of the game Tic-Tac-Toe-Tomek as described above.</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Small dataset</span></h4>
+<p class="p2"><span class="s1">1 ≤ <b>T</b> ≤ 10.</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Large dataset</span></h4>
+<p class="p2"><span class="s1">1 ≤ <b>T</b> ≤ 1000.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Sample</span></h3>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p7"><span class="s1"></span><br></p>
+        <p class="p8"><span class="s4">Input</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p9"><span class="s4"> </span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p7"><span class="s1"></span><br></p>
+        <p class="p8"><span class="s4">Output</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p9"><span class="s4"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p10"><span class="s4">6</span></p>
+        <p class="p10"><span class="s4">XXXT</span></p>
+        <p class="p10"><span class="s4">....</span></p>
+        <p class="p10"><span class="s4">OO..</span></p>
+        <p class="p10"><span class="s4">....</span></p>
+        <p class="p11"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s4">XOXT</span></p>
+        <p class="p10"><span class="s4">XXOO</span></p>
+        <p class="p10"><span class="s4">OXOX</span></p>
+        <p class="p10"><span class="s4">XXOO</span></p>
+        <p class="p11"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s4">XOX.</span></p>
+        <p class="p10"><span class="s4">OX..</span></p>
+        <p class="p10"><span class="s4">....</span></p>
+        <p class="p10"><span class="s4">....</span></p>
+        <p class="p11"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s4">OOXX</span></p>
+        <p class="p10"><span class="s4">OXXX</span></p>
+        <p class="p10"><span class="s4">OX.T</span></p>
+        <p class="p10"><span class="s4">O..O</span></p>
+        <p class="p11"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s4">XXXO</span></p>
+        <p class="p10"><span class="s4">..O.</span></p>
+        <p class="p10"><span class="s4">.O..</span></p>
+        <p class="p10"><span class="s4">T...</span></p>
+        <p class="p11"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s4">OXXX</span></p>
+        <p class="p10"><span class="s4">XO..</span></p>
+        <p class="p10"><span class="s4">..O.</span></p>
+        <p class="p10"><span class="s4">...O</span></p>
+        <p class="p11"><span class="s1"></span><br></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p10"><span class="s4">Case #1: X won</span></p>
+        <p class="p10"><span class="s4">Case #2: Draw</span></p>
+        <p class="p10"><span class="s4">Case #3: Game has not completed</span></p>
+        <p class="p10"><span class="s4">Case #4: O won</span></p>
+        <p class="p10"><span class="s4">Case #5: O won</span></p>
+        <p class="p10"><span class="s4">Case #6: O won</span></p>
+        <p class="p11"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Note</span></h3>
+<p class="p2"><span class="s1">Although your browser might not render an empty line after the last test case in the sample input, in a real input file there would be one.</span></p>
+</body>
+</html>
