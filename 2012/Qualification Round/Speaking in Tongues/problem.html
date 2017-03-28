@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p6 {margin: 0.0px 0.0px 5.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    span.s1 {font-kerning: none; background-color: #ffffff}
+    span.s2 {font-kerning: none}
+    span.s3 {font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 413.5px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Problem</span></h3>
+<p class="p2"><span class="s1">We have come up with the best possible language here at Google, called Googlerese. To translate text into Googlerese, we take any message and replace each English letter with another English letter. This mapping is <i>one-to-one</i> and <i>onto</i>, which means that the same input letter always gets replaced with the same output letter, and different input letters always get replaced with different output letters. A letter may be replaced by itself. Spaces are left as-is.</span></p>
+<p class="p2"><span class="s1">For example (and here is a hint!), our awesome translation algorithm includes the following three mappings: 'a' -&gt; 'y', 'o' -&gt; 'e', and 'z' -&gt; 'q'. This means that "a zoo" will become "y qee".</span></p>
+<p class="p2"><span class="s1">Googlerese is based on the best possible replacement mapping, and we will never change it. It will always be the same. In every test case. We will not tell you the rest of our mapping because that would make the problem too easy, but there are a few examples below that may help.</span></p>
+<p class="p2"><span class="s1">Given some text in Googlerese, can you translate it to back to normal text?</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Solving this problem</span></h3>
+<p class="p2"><span class="s1">Usually, Google Code Jam problems have 1 Small input and 1 Large input. This problem has only <b>1 Small input</b>. Once you have solved the Small input, you have finished solving this problem.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Input</span></h3>
+<p class="p2"><span class="s1">The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> test cases follow, one per line.</span></p>
+<p class="p2"><span class="s1">Each line consists of a string <b>G</b> in Googlerese, made up of one or more words containing the letters 'a' - 'z'. There will be exactly one space (' ') character between consecutive words and no spaces at the beginning or at the end of any line.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Output</span></h3>
+<p class="p2"><span class="s1">For each test case, output one line containing "Case #<b>X</b>: <b>S</b>" where <b>X</b> is the case number and <b>S</b> is the string that becomes <b>G</b> in Googlerese.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Limits</span></h3>
+<p class="p2"><span class="s1">1 ≤ <b>T</b> ≤ 30.</span><span class="s2"><br>
+</span><span class="s1"><b>G</b> contains at most 100 characters.</span><span class="s2"><br>
+</span><span class="s1">None of the text is guaranteed to be valid English.</span><span class="s2"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Sample</span></h3>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3">Input</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p4"><span class="s3">3</span></p>
+        <p class="p4"><span class="s3">ejp mysljylc kd kxveddknmc re jsicpdrysi</span></p>
+        <p class="p4"><span class="s3">rbcpc ypc rtcsra dkh wyfrepkym veddknkmkrkcd</span></p>
+        <p class="p4"><span class="s3">de kr kd eoya kw aej tysr re ujdr lkgc jv</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p5"><span class="s2"></span><br></p>
+        <p class="p6"><span class="s2"></span><br></p>
+        <p class="p5"><span class="s2"></span><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s3">Output</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p4"><span class="s3">Case #1: our language is impossible to understand</span></p>
+        <p class="p4"><span class="s3">Case #2: there are twenty six factorial possibilities</span></p>
+        <p class="p4"><span class="s3">Case #3: so it is okay if you want to just give up</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
