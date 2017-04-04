@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #efefef}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #efefef; min-height: 16.0px}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 11.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; background-color: #ffffff}
+    span.s3 {font: 9.0px Arial; font-kerning: none; background-color: #ffffff}
+    span.s4 {font: 9.0px Arial; font-kerning: none}
+    span.s5 {font-kerning: none; background-color: #efefef}
+    span.s6 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 64.4px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 80.0px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Problem</span></h3>
+<p class="p2"><span class="s2">It's opening night at the opera, and your friend is the prima donna (the lead female singer). You will not be in the audience, but you want to make sure she receives a standing ovation -- with every audience member standing up and clapping their hands for her.</span><span class="s1"><br>
+<br>
+</span><span class="s2">Initially, the entire audience is seated. Everyone in the audience has a <i>shyness level</i>. An audience member with shyness level <b>S</b></span><span class="s3"><b><sub>i</sub></b></span><span class="s2"> will wait until at least <b>S</b></span><span class="s3"><b><sub>i</sub></b></span><span class="s2"> other audience members have already stood up to clap, and if so, she will immediately stand up and clap. If <b>S</b></span><span class="s3"><b><sub>i</sub></b></span><span class="s2"> = 0, then the audience member will always stand up and clap immediately, regardless of what anyone else does. For example, an audience member with <b>S</b></span><span class="s3"><b><sub>i</sub></b></span><span class="s2"> = 2 will be seated at the beginning, but will stand up to clap later after she sees at least two other people standing and clapping.</span><span class="s1"><br>
+<br>
+</span><span class="s2">You know the shyness level of everyone in the audience, and you are prepared to invite additional friends of the prima donna to be in the audience to ensure that everyone in the crowd stands up and claps in the end. Each of these friends may have any shyness value that you wish, not necessarily the same. What is the minimum number of friends that you need to invite to guarantee a standing ovation?</span><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Input</span></h3>
+<p class="p2"><span class="s2">The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> test cases follow. Each consists of one line with <b>S</b></span><span class="s3"><b><sub>max</sub></b></span><span class="s2">, the maximum shyness level of the shyest person in the audience, followed by a string of <b>S</b></span><span class="s3"><b><sub>max</sub></b></span><span class="s2"><b> + 1</b> single digits. The <b>k</b>th digit of this string (counting starting from 0) represents how many people in the audience have shyness level <b>k</b>. For example, the string "409" would mean that there were four audience members with <b>S</b></span><span class="s3"><b><sub>i</sub></b></span><span class="s2"> = 0 and nine audience members with <b>S</b></span><span class="s3"><b><sub>i</sub></b></span><span class="s2"> = 2 (and none with <b>S</b></span><span class="s3"><b><sub>i</sub></b></span><span class="s2"> = 1 or any other value). Note that there will initially always be between 0 and 9 people with each shyness level.</span><span class="s1"><br>
+<br>
+</span><span class="s2">The string will never end in a 0. Note that this implies that there will always be at least one person in the audience.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Output</span></h3>
+<p class="p3"><span class="s1">For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1) and y is the minimum number of friends you must invite.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Limits</span></h3>
+<p class="p2"><span class="s2">1 ≤ <b>T</b> ≤ 100.</span><span class="s1"><br>
+</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Small dataset</span></h4>
+<p class="p3"><span class="s1">0 ≤ <b>S</b></span><span class="s4"><b><sub>max</sub></b></span><span class="s1"> ≤ 6.</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Large dataset</span></h4>
+<p class="p3"><span class="s1">0 ≤ <b>S</b></span><span class="s4"><b><sub>max</sub></b></span><span class="s1"> ≤ 1000.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Sample</span></h3>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p5"><span class="s1"></span><br></p>
+        <p class="p6"><span class="s5">Input</span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p7"><span class="s5"> </span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p5"><span class="s1"></span><br></p>
+        <p class="p6"><span class="s5">Output</span><span class="s6"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p7"><span class="s5"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p8"><span class="s1">4</span></p>
+        <p class="p8"><span class="s1">4 11111</span></p>
+        <p class="p8"><span class="s1">1 09</span></p>
+        <p class="p8"><span class="s1">5 110011</span></p>
+        <p class="p8"><span class="s1">0 1</span></p>
+        <p class="p9"><span class="s1"></span><br></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p8"><span class="s1">Case #1: 0</span></p>
+        <p class="p8"><span class="s1">Case #2: 1</span></p>
+        <p class="p8"><span class="s1">Case #3: 2</span></p>
+        <p class="p8"><span class="s1">Case #4: 0</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p10"><span class="s1">In Case #1, the audience will eventually produce a standing ovation on its own, without you needing to add anyone -- first the audience member with <b>S</b></span><span class="s4"><b><sub>i</sub></b></span><span class="s1"> = 0 will stand up, then the audience member with <b>S</b></span><span class="s4"><b><sub>i</sub></b></span><span class="s1"> = 1 will stand up, etc.</span></p>
+<p class="p11"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1">In Case #2, a friend with <b>S</b></span><span class="s4"><b><sub>i</sub></b></span><span class="s1"> = 0 must be invited, but that is enough to get the entire audience to stand up.</span></p>
+<p class="p11"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1">In Case #3, one optimal solution is to add two audience members with <b>S</b></span><span class="s4"><b><sub>i</sub></b></span><span class="s1"> = 2.</span></p>
+<p class="p11"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1">In Case #4, there is only one audience member and he will stand up immediately. No friends need to be invited.</span></p>
+</body>
+</html>
