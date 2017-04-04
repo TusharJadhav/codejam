@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #efefef}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #efefef; min-height: 16.0px}
+    span.s1 {font-kerning: none; background-color: #ffffff}
+    span.s2 {font-kerning: none}
+    span.s3 {font-kerning: none; background-color: #efefef}
+    span.s4 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 87.8px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 212.2px; padding: 0.0px 10.0px 0.0px 10.0px}
+  </style>
+</head>
+<body>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Problem</span></h3>
+<p class="p2"><span class="s1">Recently you went to a magic show. You were very impressed by one of the tricks, so you decided to try to figure out the secret behind it!</span></p>
+<p class="p2"><span class="s1">The magician starts by arranging 16 cards in a square grid: 4 rows of cards, with 4 cards in each row. Each card has a different number from 1 to 16 written on the side that is showing. Next, the magician asks a volunteer to choose a card, and to tell him which row that card is in.</span></p>
+<p class="p2"><span class="s1">Finally, the magician arranges the 16 cards in a square grid again, possibly in a different order. Once again, he asks the volunteer which row her card is in. With only the answers to these two questions, the magician then correctly determines which card the volunteer chose. Amazing, right?</span></p>
+<p class="p2"><span class="s1">You decide to write a program to help you understand the magician's technique. The program will be given the two arrangements of the cards, and the volunteer's answers to the two questions: the row number of the selected card in the first arrangement, and the row number of the selected card in the second arrangement. The rows are numbered 1 to 4 from top to bottom.</span></p>
+<p class="p2"><span class="s1">Your program should determine which card the volunteer chose; or if there is more than one card the volunteer might have chosen (the magician did a bad job); or if there's no card consistent with the volunteer's answers (the volunteer cheated).</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Solving this problem</span></h3>
+<p class="p2"><span class="s1">Usually, Google Code Jam problems have 1 Small input and 1 Large input. This problem has only <b>1 Small input</b>. Once you have solved the Small input, you have finished solving this problem.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Input</span></h3>
+<p class="p2"><span class="s1">The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> test cases follow. Each test case starts with a line containing an integer: the answer to the first question. The next 4 lines represent the first arrangement of the cards: each contains 4 integers, separated by a single space. The next line contains the answer to the second question, and the following four lines contain the second arrangement in the same format.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Output</span></h3>
+<p class="p2"><span class="s1">For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1).</span></p>
+<p class="p2"><span class="s1">If there is a single card the volunteer could have chosen, y should be the number on the card. If there are multiple cards the volunteer could have chosen, y should be "Bad magician!", without the quotes. If there are no cards consistent with the volunteer's answers, y should be "Volunteer cheated!", without the quotes. The text needs to be exactly right, so consider copying/pasting it from here.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Limits</span></h3>
+<p class="p2"><span class="s1">1 ≤ <b>T</b> ≤ 100.</span><span class="s2"><br>
+</span><span class="s1">1 ≤ both answers ≤ 4.</span><span class="s2"><br>
+</span><span class="s1">Each number from 1 to 16 will appear exactly once in each arrangement.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000"><span class="s1">Sample</span></h3>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p3"><span class="s2"></span><br></p>
+        <p class="p4"><span class="s3">Input</span><span class="s4"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p5"><span class="s3"> </span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p3"><span class="s2"></span><br></p>
+        <p class="p4"><span class="s3">Output</span><span class="s4"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p5"><span class="s3"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p6"><span class="s2">3</span></p>
+        <p class="p6"><span class="s2">2</span></p>
+        <p class="p6"><span class="s2">1 2 3 4</span></p>
+        <p class="p6"><span class="s2">5 6 7 8</span></p>
+        <p class="p6"><span class="s2">9 10 11 12</span></p>
+        <p class="p6"><span class="s2">13 14 15 16</span></p>
+        <p class="p6"><span class="s2">3</span></p>
+        <p class="p6"><span class="s2">1 2 5 4</span></p>
+        <p class="p6"><span class="s2">3 11 6 15</span></p>
+        <p class="p6"><span class="s2">9 10 7 12</span></p>
+        <p class="p6"><span class="s2">13 14 8 16</span></p>
+        <p class="p6"><span class="s2">2</span></p>
+        <p class="p6"><span class="s2">1 2 3 4</span></p>
+        <p class="p6"><span class="s2">5 6 7 8</span></p>
+        <p class="p6"><span class="s2">9 10 11 12</span></p>
+        <p class="p6"><span class="s2">13 14 15 16</span></p>
+        <p class="p6"><span class="s2">2</span></p>
+        <p class="p6"><span class="s2">1 2 3 4</span></p>
+        <p class="p6"><span class="s2">5 6 7 8</span></p>
+        <p class="p6"><span class="s2">9 10 11 12</span></p>
+        <p class="p6"><span class="s2">13 14 15 16</span></p>
+        <p class="p6"><span class="s2">2</span></p>
+        <p class="p6"><span class="s2">1 2 3 4</span></p>
+        <p class="p6"><span class="s2">5 6 7 8</span></p>
+        <p class="p6"><span class="s2">9 10 11 12</span></p>
+        <p class="p6"><span class="s2">13 14 15 16</span></p>
+        <p class="p6"><span class="s2">3</span></p>
+        <p class="p6"><span class="s2">1 2 3 4</span></p>
+        <p class="p6"><span class="s2">5 6 7 8</span></p>
+        <p class="p6"><span class="s2">9 10 11 12</span></p>
+        <p class="p6"><span class="s2">13 14 15 16</span></p>
+        <p class="p7"><span class="s2"></span><br></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p6"><span class="s2">Case #1: 7</span></p>
+        <p class="p6"><span class="s2">Case #2: Bad magician!</span></p>
+        <p class="p6"><span class="s2">Case #3: Volunteer cheated!</span></p>
+        <p class="p7"><span class="s2"></span><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
