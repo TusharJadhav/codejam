@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p4 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 11.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #efefef}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Courier; color: #000000; -webkit-text-stroke: #000000; background-color: #efefef; min-height: 16.0px}
+    li.li3 {margin: 0.0px 0.0px 2.5px 0.0px; line-height: 11.0px; font: 10.0px Arial; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {background-color: #ffffff; -webkit-text-stroke: 0px #000000}
+    span.s3 {font-kerning: none; background-color: #ffffff}
+    span.s4 {font: 13.0px Courier; font-kerning: none}
+    span.s5 {font: 9.0px Arial; font-kerning: none; background-color: #ffffff}
+    span.s6 {font-kerning: none; background-color: #efefef}
+    span.s7 {font: 10.0px Arial; font-kerning: none; background-color: #efefef}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 32.7px; padding: 0.0px 10.0px 0.0px 10.0px}
+    td.td2 {width: 132.7px; padding: 0.0px 10.0px 0.0px 10.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Problem</span></h3>
+<p class="p2"><span class="s1">Bleatrix Trotter the sheep has devised a strategy that helps her fall asleep faster. First, she picks a number <b>N</b>. Then she starts naming <b>N</b>, 2 × <b>N</b>, 3 × <b>N</b>, and so on. Whenever she names a number, she thinks about all of the digits in that number. She keeps track of which digits (0, 1, 2, 3, 4, 5, 6, 7, 8, and 9) she has seen at least once so far as part of any number she has named. Once she has seen each of the ten digits at least once, she will fall asleep.</span></p>
+<p class="p2"><span class="s1">Bleatrix must start with <b>N</b> and must always name (<i>i</i> + 1) × <b>N</b> directly after <i>i</i> × <b>N</b>. For example, suppose that Bleatrix picks <b>N</b> = 1692. She would count as follows:</span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s2"><b></b></span><span class="s3"><b>N</b> = 1692. Now she has seen the digits 1, 2, 6, and 9.</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">2<b>N</b> = 3384. Now she has seen the digits 1, 2, 3, 4, 6, 8, and 9.</span></li>
+  <li class="li3"><span class="s2"></span><span class="s3">3<b>N</b> = 5076. Now she has seen all ten digits, and falls asleep.</span></li>
+</ul>
+<p class="p2"><span class="s1">What is the last number that she will name before falling asleep? If she will count forever, print </span><span class="s4">INSOMNIA</span><span class="s1"> instead.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Input</span></h3>
+<p class="p2"><span class="s1">The first line of the input gives the number of test cases, <b>T</b>. <b>T</b> test cases follow. Each consists of one line with a single integer <b>N</b>, the number Bleatrix has chosen.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Output</span></h3>
+<p class="p2"><span class="s1">For each test case, output one line containing </span><span class="s4">Case #x: y</span><span class="s1">, where </span><span class="s4">x</span><span class="s1"> is the test case number (starting from 1) and </span><span class="s4">y</span><span class="s1"> is the last number that Bleatrix will name before falling asleep, according to the rules described in the statement.</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Limits</span></h3>
+<p class="p4"><span class="s3">1 ≤ <b>T</b> ≤ 100.</span><span class="s1"><br>
+</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Small dataset</span></h4>
+<p class="p4"><span class="s3">0 ≤ <b>N</b> ≤ 200.</span><span class="s1"><br>
+</span></p>
+<h4 style="margin: 0.0px 0.0px 19.0px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Large dataset</span></h4>
+<p class="p4"><span class="s3">0 ≤ <b>N</b> ≤ 10</span><span class="s5"><sup>6</sup></span><span class="s3">.</span><span class="s1"><br>
+</span></p>
+<h3 style="margin: 0.0px 0.0px 14.3px 0.0px; line-height: 16.0px; font: 14.3px Arial; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff"><span class="s1">Sample</span></h3>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p6"><span class="s1"></span><br></p>
+        <p class="p7"><span class="s6">Input</span><span class="s7"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p8"><span class="s6"> </span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p6"><span class="s1"></span><br></p>
+        <p class="p7"><span class="s6">Output</span><span class="s7"><span class="Apple-converted-space"> </span></span></p>
+        <p class="p8"><span class="s6"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p9"><span class="s1">5</span></p>
+        <p class="p9"><span class="s1">0</span></p>
+        <p class="p9"><span class="s1">1</span></p>
+        <p class="p9"><span class="s1">2</span></p>
+        <p class="p9"><span class="s1">11</span></p>
+        <p class="p9"><span class="s1">1692</span></p>
+        <p class="p10"><span class="s1"></span><br></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p9"><span class="s1">Case #1: INSOMNIA</span></p>
+        <p class="p9"><span class="s1">Case #2: 10</span></p>
+        <p class="p9"><span class="s1">Case #3: 90</span></p>
+        <p class="p9"><span class="s1">Case #4: 110</span></p>
+        <p class="p9"><span class="s1">Case #5: 5076</span></p>
+        <p class="p10"><span class="s1"></span><br></p>
+        <p class="p10"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p2"><span class="s1">In Case #1, since 2 × 0 = 0, 3 × 0 = 0, and so on, Bleatrix will never see any digit other than 0, and so she will count forever and never fall asleep. Poor sheep!</span></p>
+<p class="p2"><span class="s1">In Case #2, Bleatrix will name 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. The 0 will be the last digit needed, and so she will fall asleep after 10.</span></p>
+<p class="p2"><span class="s1">In Case #3, Bleatrix will name 2, 4, 6... and so on. She will not see the digit 9 in any number until 90, at which point she will fall asleep. By that point, she will have already seen the digits 0, 1, 2, 3, 4, 5, 6, 7, and 8, which will have appeared for the first time in the numbers 10, 10, 2, 30, 4, 50, 6, 70, and 8, respectively.</span></p>
+<p class="p2"><span class="s1">In Case #4, Bleatrix will name 11, 22, 33, 44, 55, 66, 77, 88, 99, 110 and then fall asleep.</span></p>
+<p class="p2"><span class="s1">Case #5 is the one described in the problem statement. Note that it would only show up in the Large dataset, and not in the Small dataset.</span></p>
+</body>
+</html>
